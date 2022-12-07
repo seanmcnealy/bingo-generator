@@ -29,4 +29,6 @@ Depending on make version, 'make -d' might not work, instead use 'make -D'
 
 ## Results
 
+See: [demo-bingo.pdf](deom-bingo.pdf)
+
 ![Demo](demo-bingo.pdf)
