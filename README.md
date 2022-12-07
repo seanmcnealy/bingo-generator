@@ -30,7 +30,17 @@ Depending on make version, 'make -d' might not work, instead use 'make -D'
   Reads 'numbers.tex' and parses numbers into table
 3. `Makefile`: Loops `num_bingo` times and runs `new_numbers.py` to update new numbers and uses `pdflatex`on `main.tex`to create new pdfs.
 
+### Rules
 
+Will generate columns containing random unique values, see integer ranges in table below.  
+
+| B      | I       | N       | G       | O       |
+|--------|---------|---------|---------|---------|
+| (1-15) | (15-30) | (30-45) | (45-60) | (60-75) |
+| (1-15) | (15-30) | (30-45) | (45-60) | (60-75) |
+| (1-15) | (15-30) | (30-45) | (45-60) | (60-75) |
+| (1-15) | (15-30) | (30-45) | (45-60) | (60-75) |
+| (1-15) | (15-30) | (30-45) | (45-60) | (60-75) |
 
 ## Results
 
