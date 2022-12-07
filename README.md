@@ -29,4 +29,4 @@ Depending on make version, 'make -d' might not work, instead use 'make -D'
 
 ## Results
 
-<embed src="demo-bingo.pdf" type="application/pdf">
+![Demo](demo-bingo.pdf)
