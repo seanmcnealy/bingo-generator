@@ -46,11 +46,17 @@ pattern = r"^[^{]*\{[^}]*\},$"
 
 matches = re.findall(pattern, contents, re.MULTILINE)
 
+
+# Print 'contents' before the replacements
+print(f"Bingo numbers before replacements:\n {contents}")
+
 # Iterate over the matches and use the re.sub() method to replace each match
 # with a different replacement string
 for match, replacement in zip(matches, replacements):
     contents = re.sub(match, replacement, contents, flags=re.MULTILINE)
 
+
+print(f"Bingo numbers after replacements:\n {contents}")
 # Open the file in write mode and write the updated contents to the file
 with open("numbers.tex", "w") as f:
     f.write(contents)
