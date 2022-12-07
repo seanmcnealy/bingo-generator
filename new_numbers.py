@@ -5,8 +5,8 @@ from random import sample
 import fileinput
 import re
 
+# Define the name of the file to be read
 TEX_FILENAME = 'numbers.tex'
-
 
 # Open a file and read its contents
 with open(TEX_FILENAME) as f:
@@ -45,6 +45,7 @@ for row in transposed.split('\n'):
 # Find lines that start with a left curly bracket, end with a right curly bracket and a comma
 pattern = r"^[^{]*\{[^}]*\},$"
 
+# Find all matches in the contents of the file
 matches = re.findall(pattern, contents, re.MULTILINE)
 
 
@@ -56,7 +57,7 @@ print(f"Bingo numbers before replacements:\n {contents}")
 for match, replacement in zip(matches, replacements):
     contents = re.sub(match, replacement, contents, flags=re.MULTILINE)
 
-
+# Print 'contents' after the replacements
 print(f"Bingo numbers after replacements:\n {contents}")
 # Open the file in write mode and write the updated contents to the file
 with open("numbers.tex", "w") as f:
