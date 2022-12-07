@@ -7,6 +7,7 @@ import re
 
 TEX_FILENAME = 'numbers.tex'
 
+
 # Open a file and read its contents
 with open(TEX_FILENAME) as f:
     contents = f.read()
