@@ -2,13 +2,20 @@
 
 ## Requirements
 
-> LaTeX
-> make
-> python3
+1. [LaTeX Full](https://www.latex-project.org/get/)
+2. [Python3](https://realpython.com/installing-python/)
 
 ## How to generate BINGO pages
 
-> make -d num_bingo=3
+```
+git clone https://github.com/Swepz/bingo.git
+cd bingo
+make -d num_bingo=3
+```
+num_bingo=N, where integer N => 1
+
+Depending on make version, 'make -d' might not work, instead use 'make -D'
+
 
 
 ## How is it built?
