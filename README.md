@@ -27,3 +27,6 @@ Depending on make version, 'make -d' might not work, instead use 'make -D'
   Reads 'numbers.tex' and parses numbers into table
 3. `Makefile`: Loops `num_bingo` times and runs `new_numbers.py` to update new numbers and uses `pdflatex`on `main.tex`to create new pdfs.
 
+## Results
+
+<embed src="https://github.com/Swepz/bingo/blob/main/demo-bingo.pdf" width="500" height="375">
