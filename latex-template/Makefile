@@ -6,4 +6,3 @@ clean:
 	rm -f *.log *.aux *.out
 
 .PHONY: all clean
-
