@@ -29,4 +29,4 @@ Depending on make version, 'make -d' might not work, instead use 'make -D'
 
 ## Results
 
-<embed src="https://github.com/Swepz/bingo/blob/main/demo-bingo.pdf" width="500" height="375">
+<embed src="demo-bingo.pdf" type="application/pdf">
