@@ -1,6 +1,6 @@
 # Python BINGO generator
 
-Bingo generator using Python and LaTeX, will will generate X amount of PDF's with randomized numbers that can be printed out.  
+Bingo generator using Python and LaTeX, will generate X amount of PDF's with randomized numbers that can be printed out.  
 
 
 ## Requirements
