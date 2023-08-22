@@ -6,32 +6,33 @@ import fileinput
 import re
 
 # Define the name of the file to be read
-TEX_FILENAME = 'numbers.tex'
+TEX_FILENAME = 'template.tex'
 
 # Open a file and read its contents
 with open(TEX_FILENAME) as f:
     contents = f.read()
 
+
 # Define the ranges of numbers for each column in bingo grid
-col1_range = range(1, 15)
-col2_range = range(15, 30)
-col3_range = range(30, 45)
-col4_range = range(45, 60)
-col5_range = range(60, 75)
+col1_range = range(1, 16)
+col2_range = range(16, 31)
+col3_range = range(31, 46)
+col4_range = range(46, 61)
+col5_range = range(61, 76)
 
 # # create the columns with specific ranges of numbers
-column1 = ', '.join(str(i) for i in sample(col1_range, 5)) + ','
-column2 = ', '.join(str(i) for i in sample(col2_range, 5)) + ','
-column3 = ', '.join(str(i) for i in sample(col3_range, 5)) + ','
-column4 = ', '.join(str(i) for i in sample(col4_range, 5)) + ','
-column5 = ', '.join(str(i) for i in sample(col5_range, 5)) + ','
+column1 = ', '.join(str(i) for i in sample(col1_range, 5)) + ', ' + ', '.join(str(i) for i in sample(col1_range, 5)) + ','
+column2 = ', '.join(str(i) for i in sample(col2_range, 5)) + ', ' + ', '.join(str(i) for i in sample(col2_range, 5)) + ','
+column3 = ', '.join(str(i) for i in sample(col3_range, 5)) + ', ' + ', '.join(str(i) for i in sample(col3_range, 5)) + ','
+column4 = ', '.join(str(i) for i in sample(col4_range, 5)) + ', ' + ', '.join(str(i) for i in sample(col4_range, 5)) + ','
+column5 = ', '.join(str(i) for i in sample(col5_range, 5)) + ', ' + ', '.join(str(i) for i in sample(col5_range, 5)) + ','
 
 # combine the columns into a 5x5 grid
 bingo_grid = '\n'.join([column1, column2, column3, column4, column5])
 
 # Transpose the columns in the bingo_grid string
 transposed = ""
-for i in range(5):
+for i in range(10):
     transposed += "{" + ",".join(row.split(",")[i] for row in bingo_grid.split('\n')) + "},\n"
 
 # Replace the whitespace characters with empty strings

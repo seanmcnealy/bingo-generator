@@ -1,8 +1,12 @@
 \documentclass{article}
+\usepackage{charter}
 \usepackage{graphicx}
-\usepackage{geometry}
+\graphicspath{ {./images/} }
+\usepackage[landscape]{geometry}
 \usepackage{float}
-\geometry{left=12mm, top=5mm, right=2mm, bottom=5mm}
+\usepackage{tabularx}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\geometry{left=0mm, top=20mm, right=0mm, bottom=0mm}
 
 % Create new array 
 \ExplSyntaxOn
@@ -27,24 +31,39 @@
 \input{numbers.tex}
 
 \begin{document}
-
+\thispagestyle{empty}
 % Create table using new array
 % Set the divider line width to 0.4pt
 \setlength{\arrayrulewidth}{0.3pt}
-\begin{table}[H]
+\def\arraystretch{2.5}%
+\begin{tabularx}{\textwidth}{c@{\hskip 30px}c}
+    \includegraphics[width=50mm,height=!]{OMSEFundLogo} & \includegraphics[width=50mm,height=!]{OMSEFundLogo} \\
     \textbf
     \centering
-    \resizebox{0.95\textwidth}{0.53\textheight}{%
-      \begin{tabular}{|c|c|c|c|c|}
-        \multicolumn{1}{l}{B} & \multicolumn{1}{l}{I} & \multicolumn{1}{l}{N} & \multicolumn{1}{l}{G} & \multicolumn{1}{l}{O} \vspace*{-0.3em} \\
+    \resizebox{0.45\textwidth}{!}{%
+      \begin{tabularx}{150px}{ |Y|Y|Y|Y|Y| }
+        \multicolumn{1}{c}{O} & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{S} & \multicolumn{1}{c}{E} & \multicolumn{1}{c}{F} \vspace*{-0.3em} \\
         \hline
-        \getIndex{arr}{1}{1} & \getIndex{arr}{1}{2} & \getIndex{arr}{1}{3} & \getIndex{arr}{1}{4} & \getIndex{arr}{1}{5} \\ \hline
-        \getIndex{arr}{2}{1} & \getIndex{arr}{2}{2} & \getIndex{arr}{2}{3} & \getIndex{arr}{2}{4} & \getIndex{arr}{2}{5} \\ \hline
-        \getIndex{arr}{3}{1} & \getIndex{arr}{3}{2} & \getIndex{arr}{3}{3} & \getIndex{arr}{3}{4} & \getIndex{arr}{3}{5} \\ \hline
-        \getIndex{arr}{4}{1} & \getIndex{arr}{4}{2} & \getIndex{arr}{4}{3} & \getIndex{arr}{4}{4} & \getIndex{arr}{4}{5} \\ \hline
-        \getIndex{arr}{5}{1} & \getIndex{arr}{5}{2} & \getIndex{arr}{5}{3} & \getIndex{arr}{5}{4} & \getIndex{arr}{5}{5} \\ \hline
-      \end{tabular}%
-    }
-  \end{table}
-
+        \getIndex{arr}{1}{1} & \getIndex{arr}{1}{2} & \getIndex{arr}{1}{3}                         & \getIndex{arr}{1}{4} & \getIndex{arr}{1}{5} \\ \hline
+        \getIndex{arr}{2}{1} & \getIndex{arr}{2}{2} & \getIndex{arr}{2}{3}                         & \getIndex{arr}{2}{4} & \getIndex{arr}{2}{5} \\ \hline
+        \getIndex{arr}{3}{1} & \getIndex{arr}{3}{2} & \raisebox{-.15\height}{ \includegraphics[width=4.5mm,height=4.5mm]{QR} } & \getIndex{arr}{3}{4} & \getIndex{arr}{3}{5} \\ \hline
+        \getIndex{arr}{4}{1} & \getIndex{arr}{4}{2} & \getIndex{arr}{4}{3}                         & \getIndex{arr}{4}{4} & \getIndex{arr}{4}{5} \\ \hline
+        \getIndex{arr}{5}{1} & \getIndex{arr}{5}{2} & \getIndex{arr}{5}{3}                         & \getIndex{arr}{5}{4} & \getIndex{arr}{5}{5} \\ \hline
+      \end{tabularx}%
+    } \
+&  \
+    \textbf
+    \centering
+    \resizebox{0.45\textwidth}{!}{%
+      \begin{tabularx}{150px}{ |Y|Y|Y|Y|Y| }
+        \multicolumn{1}{c}{O} & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{S} & \multicolumn{1}{c}{E} & \multicolumn{1}{c}{F} \vspace*{-0.3em} \\
+        \hline
+        \getIndex{arr}{6}{1} & \getIndex{arr}{6}{2} & \getIndex{arr}{6}{3}                         & \getIndex{arr}{6}{4} & \getIndex{arr}{6}{5} \\ \hline
+        \getIndex{arr}{7}{1} & \getIndex{arr}{7}{2} & \getIndex{arr}{7}{3}                         & \getIndex{arr}{7}{4} & \getIndex{arr}{7}{5} \\ \hline
+        \getIndex{arr}{8}{1} & \getIndex{arr}{8}{2} & \raisebox{-.2\height}{ \includegraphics[width=4.5mm,height=4.5mm]{QR} } & \getIndex{arr}{8}{4} & \getIndex{arr}{8}{5} \\ \hline
+        \getIndex{arr}{9}{1} & \getIndex{arr}{9}{2} & \getIndex{arr}{9}{3}                         & \getIndex{arr}{9}{4} & \getIndex{arr}{9}{5} \\ \hline
+        \getIndex{arr}{10}{1} & \getIndex{arr}{10}{2} & \getIndex{arr}{10}{3}                         & \getIndex{arr}{10}{4} & \getIndex{arr}{10}{5} \\ \hline
+      \end{tabularx}%
+    } \\
+\end{tabularx}
 \end{document}
